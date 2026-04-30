@@ -53,6 +53,7 @@ body {
     align-items: center;
 
 }
+
 .logo_cnt {
     display: flex;
     gap: .1rem;
@@ -78,6 +79,25 @@ body {
     border: none;
     outline: none;
     text-align: center;
+    color: gray;
+}
+
+/*Run button*/
+.run_btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 5rem;
+    box-shadow: 0px 0px .3rem rgb(139, 138, 138);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #03303f;
+    margin-inline-end: 1rem;
+}
+.run_ic {
+    width: 20px;
+    height: 20px;
 }
 
 .explorer {
