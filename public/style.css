@@ -148,6 +148,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
 .side_bar_header {
@@ -156,13 +157,39 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
 .side_bar_cnt_child {
     display: flex;
     align-items: center;
 }
+
 .side_bar_cnt_child img {
     width: 20px;
     height: 20px;
+}
+
+.open_folder_cnt {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.open_folder_btn {
+    width: 100%;
+    padding: .4rem;
+    background: rgb(0, 90, 226);
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: .5rem;
+}
+
+.info_txt {
+    color: gray;
+    text-align: justify;
 }
 
 .editorFrame {
