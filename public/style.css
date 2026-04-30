@@ -209,16 +209,21 @@ body {
     border-bottom-left-radius: 0rem;
     border-bottom-right-radius: 0rem;
 }
+
 .file_tabs_cnt {
     width: 100%;
-    height: 2rem;
+    height: 3rem;
     display: flex;
     border-bottom: .3px solid gray;
+    padding: .5rem;
+    gap: .3rem;
 }
+
 .tabs {
     padding: .4rem;
+    box-shadow: 0px 0px .3rem rgb(139, 138, 138);
     border: none;
-    border-right: 1px solid gray;
+    border-radius: 4rem;
     flex: 0 0 auto;
     background: none;
     color: rgb(48, 48, 48);
