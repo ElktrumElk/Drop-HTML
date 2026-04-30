@@ -107,6 +107,9 @@ body {
     height: 100%;
     background: var(--fg-cl);
     border-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+
     padding: .5rem;
     display: grid;
     grid-template-columns: .2fr 1fr;
@@ -123,9 +126,10 @@ body {
     gap: 2rem;
     padding: 1rem;
     box-shadow: 0px 0px .3rem rgb(139, 138, 138);
-    
+
 }
-.ex-gutter > div {
+
+.ex-gutter>div {
     width: 90%;
     height: 1rem;
     display: flex;
@@ -133,9 +137,22 @@ body {
     align-items: center;
 }
 
-.side_ic{
+.side_ic {
     width: 30px;
     height: 30px;
+}
+
+.side_bar_cnt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side_bar_header {
+    width: 90%;
+    margin-block-start: 1rem;
 }
 
 .editorFrame {
@@ -147,7 +164,8 @@ body {
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
 }
 
 
