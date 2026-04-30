@@ -7,14 +7,29 @@
   <title>Document</title>
   <link rel="stylesheet" href="/style.css">
 
-  <script src="lib/codemirror.js"></script>
-  <link rel="stylesheet" href="lib/codemirror.css">
-  <script src="mode/javascript/javascript.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=DM+Serif+Text:ital@0;1&family=Kablammo&family=Lavishly+Yours&family=PT+Serif+Caption:ital@0;1&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Tangerine:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
   <div class="app">
+    <header class="header">
+      <div class="logo_cnt">
+        <img class="logoIcon" />
+        <h1 class="logoName kablammo-logo">DropH</h1>
+      </div>
+
+      <div class="project_name_cnt">
+        <input class="project_name"/>
+      </div>
+
+      <div class="project_name_cnt"></div>
+    </header>
+    <aside class="explorer"></aside>
     <div id="editor-container" class="editorFrame"></div>
   </div>
 
