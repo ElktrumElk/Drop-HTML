@@ -95,10 +95,12 @@ body {
     color: #03303f;
     margin-inline-end: 1rem;
 }
+
 .run_ic {
     width: 20px;
     height: 20px;
 }
+
 
 .explorer {
     width: 100%;
@@ -106,7 +108,23 @@ body {
     background: var(--fg-cl);
     border-radius: 1rem;
     padding: .5rem;
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+}
 
+.ex-gutter {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background: rgba(128, 128, 128, 0.208);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.ex-gutter > div {
+    width: 90%;
+    height: 5rem;
 }
 
 .editorFrame {
