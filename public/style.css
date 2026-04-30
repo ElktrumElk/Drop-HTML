@@ -217,8 +217,11 @@ body {
 }
 .tabs {
     padding: .4rem;
-    border: 1px solid red;
+    border: none;
+    border-right: 1px solid gray;
     flex: 0 0 auto;
+    background: none;
+    color: rgb(48, 48, 48);
 }
 
 
