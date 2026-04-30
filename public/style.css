@@ -227,6 +227,14 @@ body {
     flex: 0 0 auto;
     background: none;
     color: rgb(48, 48, 48);
+    display: flex;
+    gap: .3rem;
+}
+
+.tabs img {
+    width: 20px;
+    height: 20px;
+    color: #062bb0;
 }
 
 
