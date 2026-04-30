@@ -187,6 +187,10 @@ body {
     border-radius: .5rem;
 }
 
+.open_folder_btn:hover {
+    box-shadow: 0px 0px .3rem rgb(139, 138, 138);
+}
+
 .info_txt {
     color: gray;
     text-align: justify;
@@ -200,9 +204,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     border-radius: 1rem;
     border-bottom-left-radius: 0rem;
     border-bottom-right-radius: 0rem;
+}
+.file_tabs_cnt {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    border-bottom: .3px solid gray;
+}
+.tabs {
+    padding: .4rem;
+    border: 1px solid red;
+    flex: 0 0 auto;
 }
 
 
