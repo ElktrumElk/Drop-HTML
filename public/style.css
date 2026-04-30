@@ -153,6 +153,16 @@ body {
 .side_bar_header {
     width: 90%;
     margin-block-start: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.side_bar_cnt_child {
+    display: flex;
+    align-items: center;
+}
+.side_bar_cnt_child img {
+    width: 20px;
+    height: 20px;
 }
 
 .editorFrame {
