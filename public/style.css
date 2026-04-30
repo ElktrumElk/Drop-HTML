@@ -7,6 +7,7 @@
 
     --bg-cl: #f5f5f5;
     --fg-cl: #ffffff;
+    --section-bd-vl: .3px solid gray;
 }
 
 
@@ -37,7 +38,7 @@ body {
     display: grid;
     grid-template-columns: .4fr 1fr;
     grid-template-rows: .06fr 1fr;
-    gap: .4rem;
+    gap: 0rem;
 
     position: fixed;
     width: 100%;
@@ -51,6 +52,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-block-end: var(--section-bd-vl);
+
 
 }
 
@@ -106,13 +109,12 @@ body {
     width: 100%;
     height: 100%;
     background: var(--fg-cl);
-    border-radius: 1rem;
-    border-bottom-left-radius: 0rem;
-    border-bottom-right-radius: 0rem;
-
     padding: .5rem;
     display: grid;
     grid-template-columns: .2fr 1fr;
+    border-left: var(--section-bd-vl);
+    border-inline-end: var(--section-bd-vl);
+
 }
 
 .ex-gutter {
@@ -193,7 +195,7 @@ body {
 
 .info_txt {
     color: gray;
-    text-align: justify;
+    text-align: left;
 }
 
 .editorFrame {
@@ -204,10 +206,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    border-radius: 1rem;
-    border-bottom-left-radius: 0rem;
-    border-bottom-right-radius: 0rem;
+
 }
 
 .file_tabs_cnt {
@@ -221,9 +220,9 @@ body {
 
 .tabs {
     padding: .4rem;
-    box-shadow: 0px 0px .3rem rgb(139, 138, 138);
+    box-shadow: 0px 0px .2rem rgb(139, 138, 138);
     border: none;
-    border-radius: 4rem;
+    border-radius: .3rem;
     flex: 0 0 auto;
     background: none;
     color: rgb(48, 48, 48);
@@ -250,4 +249,12 @@ body {
 .editorFrame::-webkit-scrollbar-thumb {
     background: rgba(37, 37, 37, 0.557);
     border-radius: 1rem;
+}
+
+.terminal {
+    width: 100%;
+    height: 20rem;
+
+    background-color: var(--fg-cl);
+    border-top: .3px solid gray;
 }
