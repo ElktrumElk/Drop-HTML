@@ -19,6 +19,6 @@ export const styles = {
     dark: {
         bgColor: '#010101',
         fgColor: '#000000',
-        txtColor: '#faf8f8',
+        txtColor: '#c4c2c2',
     }
 }

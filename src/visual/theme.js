@@ -6,8 +6,8 @@ const { light, dark } = styles;
 // 1. Define the theme first
 export const myTheme = EditorView.theme({
     "&": {
-        color: light.txtColor,
-        backgroundColor: light.fgColor,
+        color: dark.txtColor,
+        backgroundColor: dark.fgColor,
         minHeight: "100%",
         width: "100%"
     },
@@ -16,7 +16,7 @@ export const myTheme = EditorView.theme({
         caretColor: "#0e9"
     },
     ".cm-gutters": {
-        backgroundColor: light.fgColor,
+        backgroundColor: dark.fgColor,
         color: "#555252",
         border: "none"
     },

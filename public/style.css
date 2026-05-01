@@ -10,6 +10,16 @@
     --section-bd-vl: .3px solid gray;
 }
 
+body.dark {
+    --pd-value: 1rem;
+    --pd-value-2: .9rem;
+    --txt-color: rgb(231, 231, 231);
+    --logo-txt-cl: rgb(26, 67, 201);
+    --grid-auto-row-vl: 20px;
+    --bg-cl: #121212;
+    --fg-cl: #0b0a0a;
+    --section-bd-vl: .3px solid gray;
+}
 
 .kablammo-logo {
     font-family: "Kablammo", system-ui;
@@ -20,12 +30,15 @@
         "MORF" 0;
 }
 
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
     font-size: 1rem;
+    color: var(--txt-color);
 }
 
 body {
@@ -53,7 +66,6 @@ body {
     justify-content: space-between;
     align-items: center;
     border-block-end: var(--section-bd-vl);
-
 
 }
 
@@ -83,6 +95,7 @@ body {
     outline: none;
     text-align: center;
     color: gray;
+    background: none;
 }
 
 /*Run button*/
@@ -95,6 +108,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
     color: #03303f;
     margin-inline-end: 1rem;
 }
@@ -121,7 +135,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-  
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,7 +186,7 @@ body {
 
 .open_folder_cnt {
     width: 90%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -197,6 +211,38 @@ body {
     color: gray;
     text-align: left;
 }
+
+
+.file_cnt {
+    width: 90%;
+    height: 100%;
+    overflow-y: auto;
+
+}
+
+.file_lists_cnt {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.file_lists_cnt li {
+    width: 100%;
+    padding: .4rem;
+    /* background: rgba(128, 128, 128, 0.26); */
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.file_lists_cnt li img {
+    width: 20px;
+    height: 20px;
+}
+
 
 .editorFrame {
     width: 100%;
@@ -230,6 +276,10 @@ body {
     gap: .3rem;
 }
 
+.tabs span {
+    color: gray;
+}
+
 .tabs img {
     width: 20px;
     height: 20px;
@@ -253,7 +303,7 @@ body {
 
 .terminal {
     width: 100%;
-    height: 20rem;
+    height: 15rem;
 
     background-color: var(--fg-cl);
     border-top: .3px solid gray;
