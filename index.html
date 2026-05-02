@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style1.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +19,11 @@
 <body class="dark">
 
   <div class="app">
-    <header class="header">
+    <header id="header" class="header">
       <div class="logo_cnt">
         <img class="logoIcon" />
         <h1 class="logoName kablammo-logo">DropH</h1>
+        <div id="hamBugger"></div>
       </div>
 
       <div class="project_name_cnt">
@@ -62,7 +64,7 @@
           </div>
         </div>
 
-        <div class="open_folder_cnt">
+        <div id="open_folder_cnt" class="open_folder_cnt">
           <p class="info_txt">
             By opening a folder you give right to DropH to read and write directly in your storage within the folder and
             it children
@@ -71,14 +73,12 @@
         </div>
 
         <div class="file_cnt">
-          <ul class="file_lists_cnt">
-            <li>
-              <img src="https://img.icons8.com/?size=100&id=11260&format=png&color=ff7f50" />
-              <span>Index.html</span>
-            </li>
+          <ul id="file_cnt_ui" class="file_lists_cnt">
           </ul>
         </div>
       </div>
+
+      <div class="resizer_border resizer_border_hover"></div>
     </aside>
 
 
@@ -89,20 +89,17 @@
           <span>Index.html</span>
           <img src="https://img.icons8.com/?size=100&id=71200&format=png&color=7a7a7a" />
         </button>
-        <button class="tabs">
-          <img src="https://img.icons8.com/?size=100&id=38273&format=png&color=062bb0" />
-          <span>style.css</span>
-          <img src="https://img.icons8.com/?size=100&id=71200&format=png&color=7a7a7a" />
-        </button>
-        <button class="tabs">
-          <img src="https://img.icons8.com/?size=100&id=aI7FuaV1tPNN&format=png&color=000000" />
-          <span>script.js</span>
-          <img src="https://img.icons8.com/?size=100&id=71200&format=png&color=7a7a7a" />
-        </button>
       </div>
-      <div id="editor-container" class="editorFrame"></div>
+      <div id="editor-container" class="editor">
+        <h2 class="dp">DROP H</h2>
+        <div class="dp_btn_cnt">
+          <button id="dp-open-folder-btn" class="dp_open_f_btn">Open Folder</button>
+        </div>
+      </div>
 
-      <div id="terminal_cnt" class="terminal"></div>
+      <div id="terminal_cnt" class="terminal">
+        <div class="resizer_border_2 resizer_border_hover"></div>
+      </div>
 
     </div>
   </div>
