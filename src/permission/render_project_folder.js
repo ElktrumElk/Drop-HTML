@@ -67,17 +67,21 @@ export function renderFolder() {
                         RenderEditorFrame(e.target.dataset.id, e.target.dataset.open);
                         return;
                     }
+                    else {
+                        RenderTabBtn({
+                            typeIc: '',
+                            tabName: entry.name,
+                            dataId: `${entry.name}-${randId}`,
+                            dataState: true
+                        });
+                    }
 
                     // Highlight active file (optional)
                     document.querySelectorAll('.file-item').forEach(el => el.classList.remove('active'));
                     e.target.classList.add('active');
                     e.target.setAttribute('data-open', true);
-                    RenderTabBtn({
-                        typeIc: '',
-                        tabName: entry.name,
-                        dataId: `${entry.name}-${randId}`,
-                        dataState: true
-                    })
+
+
 
                     /**
                      * @type String

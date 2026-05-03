@@ -299,22 +299,29 @@ body {
 
 .file_tabs_cnt {
     width: 100%;
-    height: 3rem;
+    height: 3.5rem;
     display: flex;
-    border-bottom: .3px solid gray;
-    padding: .5rem;
+    border-bottom: var(--section-bd-vl);
+    padding-top: .2rem;
     gap: .3rem;
+    overflow-x: auto;
+}
+.file_tabs_cnt::-webkit-scrollbar {
+    display: none;
 }
 
 .tabs {
-    padding: .4rem;
-    box-shadow: 0px 0px .2rem rgb(139, 138, 138);
-    border: none;
+    padding: 1rem .3rem 1rem .3rem;
+    border: var(--section-bd-vl);
     border-radius: .3rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     flex: 0 0 auto;
     background: none;
     color: rgb(48, 48, 48);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: .3rem;
 }
 
@@ -328,6 +335,12 @@ body {
     color: #062bb0;
 }
 
+.tabs.active {
+    background: var(--fg-cl-2);
+    box-shadow: none;
+    border-top: 1px solid rgb(14, 69, 251);
+    border-bottom: 1px solid var(--fg-cl-2);
+}
 
 .editorFrame::-webkit-scrollbar {
     display: flex;
@@ -347,7 +360,7 @@ body {
     width: 100%;
     height: 15rem;
     background-color: var(--fg-cl);
-    border-top: .3px solid gray;
+    border-top: var(--section-bd-vl);
     position: relative;
 }
 
