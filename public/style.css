@@ -52,7 +52,7 @@ body {
 .app {
     height: 100%;
     display: grid;
-    grid-template-columns: .3fr auto;
+    grid-template-columns: 400px auto;
     grid-template-rows: .06fr 1fr;
     gap: 0rem;
     position: fixed;
@@ -152,17 +152,18 @@ body {
 
 }
 
-.ex-gutter>div {
+.ex-gutter > div {
     width: 90%;
     height: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
 .side_ic {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .side_bar_cnt {
@@ -418,7 +419,7 @@ body {
 @media (max-width: 845px) {
 
     .app {
-        grid-template-columns: .14fr auto;
+        grid-template-columns: 75px auto;
     }
 
     .side_bar_cnt {

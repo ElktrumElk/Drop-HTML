@@ -69,4 +69,25 @@ const resize = () => {
     }
 }
 
+
+const expandOnClick = () => {
+    let isExpDisplay = window.screen.width >= 845 ? true : false;
+    const sideBarCnt = document.getElementById('side-bar-cnt');
+    const app = document.getElementById('app');
+    const folderBtn = document.getElementById('project-folder');
+
+    folderBtn.addEventListener('click', () => {
+        if (!isExpDisplay) {
+            app.style.gridTemplateColumns = '40% auto'
+            sideBarCnt.style.display = 'flex';
+            isExpDisplay = true;
+        } else {
+            app.style.gridTemplateColumns = '75px auto'
+            sideBarCnt.style.display = 'none';
+            isExpDisplay = false;
+        }
+    });
+}
+
+expandOnClick();
 resize();
