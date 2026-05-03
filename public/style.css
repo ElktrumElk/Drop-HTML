@@ -52,10 +52,9 @@ body {
 .app {
     height: 100%;
     display: grid;
-    grid-template-columns: .4fr 1fr;
+    grid-template-columns: .3fr auto;
     grid-template-rows: .06fr 1fr;
     gap: 0rem;
-
     position: fixed;
     width: 100%;
 }
@@ -131,8 +130,12 @@ body {
     display: grid;
     grid-template-columns: .2fr 1fr;
     border-inline-end: var(--section-bd-vl);
+    overflow-x: auto;
     position: relative;
+}
 
+.explorer::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -170,6 +173,10 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+.side_bar_cnt.expand {
+    display: flex;
 }
 
 .side_bar_header {
@@ -241,6 +248,13 @@ body {
     display: flex;
     align-items: center;
     gap: .5rem;
+    text-wrap-mode: nowrap;
+
+}
+
+.file-item:active {
+    border: 1px solid rgb(60, 60, 239);
+    background: 1px solid rgba(60, 60, 239, 0.374);
 }
 
 .file_lists_cnt li img {
@@ -292,6 +306,7 @@ body {
     color: gray;
 
 }
+
 .dp_open_f_btn span {
     color: gray;
 
@@ -306,6 +321,7 @@ body {
     gap: .3rem;
     overflow-x: auto;
 }
+
 .file_tabs_cnt::-webkit-scrollbar {
     display: none;
 }
@@ -343,22 +359,15 @@ body {
 }
 
 .editorFrame::-webkit-scrollbar {
-    display: flex;
+    display: none;
 
 }
 
-.editorFrame::-webkit-scrollbar-track {
-    background: none;
-}
-
-.editorFrame::-webkit-scrollbar-thumb {
-    background: rgba(37, 37, 37, 0.557);
-    border-radius: 1rem;
-}
 
 .terminal {
     width: 100%;
     height: 15rem;
+    min-height: 1rem;
     background-color: var(--fg-cl);
     border-top: var(--section-bd-vl);
     position: relative;
@@ -388,10 +397,29 @@ body {
     background: rgba(6, 89, 232, 0.719);
 }
 
+.miniMap {
+    width: 20px;
+    height: 100%;
+    background: transparent;
+
+}
+
+.footer {
+    width: 100dvw;
+    height: 2rem;
+    border-top: var(--section-bd-vl);
+    box-shadow: 0 0 .2rem gray;
+    border-radius: 0rem;
+    background-color: var(--fg-cl);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
 @media (max-width: 845px) {
 
     .app {
-        grid-template-columns: .2fr 2fr;
+        grid-template-columns: .1fr auto;
     }
 
     .side_bar_cnt {
@@ -399,19 +427,20 @@ body {
     }
 
     .explorer {
-        grid-template-columns: 1fr;
+        grid-template-columns: .2fr 1fr;
     }
 }
 
 @media (max-width: 600px) {
     .app {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
     }
+
     .explorer {
         display: none;
     }
 
-    
+
     .logoName {
         display: none;
     }

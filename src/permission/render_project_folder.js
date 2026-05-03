@@ -37,9 +37,9 @@ export function renderFolder() {
             li.setAttribute('data-id', `${entry.name}-${randId}`);
             span.setAttribute('data-id', `${entry.name}-${randId}`);
 
-            if (li.classList.value === 'file-item') {
+            const { fileTypeIc } = styles;
 
-                const { fileTypeIc } = styles;
+            if (li.classList.value === 'file-item') {
 
                 if (span.textContent.split('.').reverse()[0] === 'html') {
                     img.src = fileTypeIc.html;
@@ -56,6 +56,8 @@ export function renderFolder() {
                 else {
                     img.src = fileTypeIc.txt;
                 }
+            } else {
+                img.src = fileTypeIc.folder
             }
 
             if (entry.kind === 'file') {
@@ -80,6 +82,7 @@ export function renderFolder() {
                     document.querySelectorAll('.file-item').forEach(el => el.classList.remove('active'));
                     e.target.classList.add('active');
                     e.target.setAttribute('data-open', true);
+                    e.target.setAttribute('data-type', `${entry.name.split('.').reverse()[0]}`);
 
 
 
@@ -87,7 +90,7 @@ export function renderFolder() {
                      * @type String
                      */
                     let fileContent = await openFile(entry); // Call open function when clicked;
-                    editor(fileContent, e.target.dataset.id);
+                    editor(fileContent, e.target.dataset.id, e.target.dataset.type);
                 });
             }
 

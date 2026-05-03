@@ -8,8 +8,9 @@ export const myTheme = EditorView.theme({
     "&": {
         color: dark.txtColor,
         backgroundColor: dark.fgColor,
-        minHeight: "100%",
-        width: "100%"
+        height: "100%",
+        width: "100%",
+        overflowY: 'auto'
     },
 
     ".cm-content": {
@@ -18,7 +19,8 @@ export const myTheme = EditorView.theme({
     ".cm-gutters": {
         backgroundColor: dark.fgColor,
         color: "#555252",
-        border: "none"
+        border: "none",
+        overflowY: 'auto'
     },
     ".cm-activeLine": {
         backgroundColor: "#2a292945"
@@ -65,12 +67,42 @@ export const myTheme = EditorView.theme({
         },
 
         "&::-webkit-scrollbar-thumb": {
-            background: "rgba(37, 37, 37, 0.557)",
-            borderRadius: "1rem"
+            background: "rgba(37, 37, 37, 0.31)",
+            borderRadius: ".1rem",
+            width: '1px'
         }
     },
     ".cm-tooltip-autocomplete ul::-webkit-scrollbar": {
         display: "none"
+    },
+
+    "& .cm-minimap": {
+        backgroundColor: 'transparent',
+        width: "10px !important",
+        height: '100%'
+    },
+    "& .cm-minimap-inner": {
+        width: "20px !important"
+    },
+    "& .cm-minimap *::-webkit-scrollbar": {
+        display: 'none'
+    },
+
+    // The "active zone" box that follows your scroll
+    "& .cm-minimap-overlay": {
+        width: '100% !important',
+        backgroundColor: "transparent",
+        border: "none",
+
+    },
+
+    // The text or blocks inside the minimap
+    "& .cm-minimap-gutter": {
+        opacity: 0.6
+    },
+
+    "& .cm-minimap-gutter::-webkit-scrollbar": {
+       display: 'none'
     }
 
 }, { dark: true });
