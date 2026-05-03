@@ -18,7 +18,9 @@ export default function RenderTabBtn({ typeIc, tabName, dataId, dataState }) {
     const span = document.createElement('span');
     const closeIc = document.createElement('img');
 
-    button.setAttribute('class', 'tabs');
+    removeActive();
+
+    button.setAttribute('class', 'tabs active');
     button.setAttribute('data-id', dataId);
     button.setAttribute('data-open', dataState);
     fileTypeIc.setAttribute('data-id', dataId);
@@ -37,5 +39,18 @@ export default function RenderTabBtn({ typeIc, tabName, dataId, dataState }) {
 
     parent.appendChild(button);
 
-    button.addEventListener('click', () => RenderEditorFrame(button.dataset.id, button.dataset.open));
+    button.addEventListener('click', (e) => {
+        /**
+         * @type HTMLButtonElement
+         */
+        removeActive();
+        button.classList.add('active');
+        RenderEditorFrame(button.dataset.id, button.dataset.open);
+    });
+}
+
+function removeActive() {
+    document.querySelectorAll('.tabs').forEach(e => {
+        e.classList.remove('active');
+    });
 }
