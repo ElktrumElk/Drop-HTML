@@ -143,13 +143,12 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     padding: 1rem;
-    box-shadow: 0px 0px .3rem rgb(139, 138, 138);
+    border: var(--section-bd-vl);
 
 }
 
@@ -189,6 +188,7 @@ body {
 .side_bar_cnt_child {
     display: flex;
     align-items: center;
+    gap: .5rem;
 }
 
 .side_bar_cnt_child img {
@@ -408,7 +408,6 @@ body {
     width: 100dvw;
     height: 2rem;
     border-top: var(--section-bd-vl);
-    box-shadow: 0 0 .2rem gray;
     border-radius: 0rem;
     background-color: var(--fg-cl);
     position: fixed;
@@ -419,7 +418,7 @@ body {
 @media (max-width: 845px) {
 
     .app {
-        grid-template-columns: .1fr auto;
+        grid-template-columns: .14fr auto;
     }
 
     .side_bar_cnt {
