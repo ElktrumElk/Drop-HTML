@@ -14,6 +14,12 @@ const handleFolderPicker = async () => {
   if (directoryHandle) {
     const { renderFileList } = renderFolder();
     await renderFileList(await directoryHandle);
+
+    /**
+     * @type HTMLInputElement
+     */
+    const projectTitle = document.getElementById('project-name');
+    projectTitle.value = directoryHandle.name;
   }
 }
 

@@ -27,7 +27,7 @@
       </div>
 
       <div class="project_name_cnt">
-        <input class="project_name" value="untitled" />
+        <input id="project-name" class="project_name" value="untitled" />
       </div>
 
       <div class="project_name_cnt">
@@ -69,7 +69,7 @@
             By opening a folder you give right to DropH to read and write directly in your storage within the folder and
             it children
           </p>
-          <button id="open_folder" class="open_folder_btn">Open Folder</button>
+          <button id="open_folder" class="open_folder_btn">Open Folder </button>
         </div>
 
         <div class="file_cnt">
@@ -83,18 +83,23 @@
 
 
     <div class="editorFrame">
-      <div class="file_tabs_cnt">
+      <div id="ed-file-tab-cnt" class="file_tabs_cnt">
+
         <button class="tabs">
           <img src="https://img.icons8.com/?size=100&id=11260&format=png&color=ff7f50" />
           <span>Index.html</span>
           <img src="https://img.icons8.com/?size=100&id=71200&format=png&color=7a7a7a" />
         </button>
+
       </div>
-      <div id="editor-container" class="editor">
+
+      <div id="editor_panel" class="editor">
+
         <h2 class="dp">DROP H</h2>
         <div class="dp_btn_cnt">
-          <button id="dp-open-folder-btn" class="dp_open_f_btn">Open Folder</button>
+          <button id="dp-open-folder-btn" class="dp_open_f_btn">Open Folder <span>ctrl+k+o</span></button>
         </div>
+
       </div>
 
       <div id="terminal_cnt" class="terminal">

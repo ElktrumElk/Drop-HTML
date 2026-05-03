@@ -1,5 +1,6 @@
 
 export function folderPicker() {
+
     async function getFolderWithPermissions() {
         try {
             // 1. Open the folder picker with read/write request
@@ -12,6 +13,7 @@ export function folderPicker() {
 
             if (hasPermission) {
                 console.log("Access granted to:", directoryHandle.name);
+                
                 // Now you can list files or read content
                 await listFiles(directoryHandle);
             }
@@ -40,7 +42,7 @@ export function folderPicker() {
 
     async function listFiles(dirHandle) {
         for await (const entry of dirHandle.values()) {
-            console.log(`${entry.kind}: ${entry.name}`);
+          
             // entry.kind is either 'file' or 'directory'
         }
     }

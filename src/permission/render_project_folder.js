@@ -1,5 +1,7 @@
+import { RenderEditorFrame } from "../app_components/render_editor_frame";
 import { styles } from "../visual/eStyle";
 import { editor } from "../visual/editor_view";
+import RenderTabBtn from "../app_components/render_tab_btn";
 
 export function renderFolder() {
 
@@ -12,9 +14,13 @@ export function renderFolder() {
 
     // Function to render the folder contents into your UI
     async function renderFileList(dirHandle) {
+
         const listContainer = document.getElementById('file_cnt_ui');
+
+        // Comment: The open folder container 
         const openFolderCnt = document.getElementById('open_folder_cnt');
-        openFolderCnt.remove();
+        openFolderCnt.remove(); // Remove
+
         listContainer.innerHTML = ''; // Clear previous list
 
         for await (const entry of dirHandle.values()) { //
@@ -22,11 +28,19 @@ export function renderFolder() {
             const span = document.createElement('span');
             const img = document.createElement('img');
 
-            span.textContent = entry.name;
+            // Comment: Give random dataset id
+            const randId = Math.floor(Math.random() * 9999);
+
+            span.textContent = entry.name; // Name of the file
             li.className = entry.kind === 'directory' ? 'folder-item' : 'file-item';
 
+            li.setAttribute('data-id', `${entry.name}-${randId}`);
+            span.setAttribute('data-id', `${entry.name}-${randId}`);
+
             if (li.classList.value === 'file-item') {
+
                 const { fileTypeIc } = styles;
+
                 if (span.textContent.split('.').reverse()[0] === 'html') {
                     img.src = fileTypeIc.html;
                 }
@@ -45,18 +59,34 @@ export function renderFolder() {
             }
 
             if (entry.kind === 'file') {
-                li.addEventListener('click', async () => {
+
+                li.addEventListener('click', async (e) => {
+
+                    //Check if already openned to prevent multiple open
+                    if (e.target.dataset.open) {
+                        RenderEditorFrame(e.target.dataset.id, e.target.dataset.open);
+                        return;
+                    }
+
                     // Highlight active file (optional)
                     document.querySelectorAll('.file-item').forEach(el => el.classList.remove('active'));
-                    li.classList.add('active');
+                    e.target.classList.add('active');
+                    e.target.setAttribute('data-open', true);
+                    RenderTabBtn({
+                        typeIc: '',
+                        tabName: entry.name,
+                        dataId: `${entry.name}-${randId}`,
+                        dataState: true
+                    })
 
                     /**
                      * @type String
                      */
                     let fileContent = await openFile(entry); // Call open function when clicked;
-                    editor(fileContent);
+                    editor(fileContent, e.target.dataset.id);
                 });
             }
+
             li.appendChild(img);
             li.appendChild(span);
             listContainer.appendChild(li);

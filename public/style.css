@@ -289,6 +289,11 @@ body {
     padding: .5rem;
     border: .2px solid rgba(128, 128, 128, 0.642);
     border-radius: .4rem;
+    color: gray;
+
+}
+.dp_open_f_btn span {
+    color: gray;
 
 }
 
@@ -392,6 +397,8 @@ body {
     .explorer {
         display: none;
     }
+
+    
     .logoName {
         display: none;
     }

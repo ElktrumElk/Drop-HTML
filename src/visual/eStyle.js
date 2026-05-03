@@ -38,7 +38,6 @@ export const styles = {
         js: 'https://img.icons8.com/?size=100&id=aI7FuaV1tPNN&format=png&color=f2ff00',
         json: 'https://img.icons8.com/?size=100&id=22441&format=png&color=f2ff00',
         gitignore: 'https://img.icons8.com/?size=100&id=16335&format=png&color=7a7a7a',
-        txt: 'https://img.icons8.com/?size=100&id=1395&format=png&color=7a7a7a',
-
+        txt: 'https://img.icons8.com/?size=100&id=1395&format=png&color=7a7a7a'
     }
 }

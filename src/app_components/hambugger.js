@@ -6,18 +6,19 @@ import { setFileActive } from "./pop_up";
 export default async function Hambugger() {
     let isActive = false;
 
+    // Comment: When the hambugger menu is clicked
     crossEvent("click", 'ham_menu', () => {
 
         if (!isActive) {
             document.getElementById('pop_menu-1').style.display = 'flex';
             isActive = true;
+
         } else {
             document.getElementById('pop_menu-1').style.display = '';
-            document.getElementById('file_sub_menu').style.display = '';
-            setFileActive(false);
+            setFileActive(false, 'none');
             isActive = false;
-
         }
+
     });
 
 
